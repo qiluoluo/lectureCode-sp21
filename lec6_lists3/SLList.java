@@ -1,5 +1,3 @@
-package lec6_lists3;
-
 /** An SLList is a list of integers, which hides the terrible truth
    * of the nakedness within. */
 public class SLList<LochNess> {	
@@ -45,6 +43,16 @@ public class SLList<LochNess> {
 
  		p.next = new StuffNode(x, null);
  	}
+
+	 /** Get ith item in the list. */
+	public LochNess get(int i) {
+		 StuffNode p = first;
+		 while (i > 0) {
+			 p = p.next;
+			 i -= 1;
+		 }
+		 return p.item;
+	}
 
  	public int size() {
  		return size;

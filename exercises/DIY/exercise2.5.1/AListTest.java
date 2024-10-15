@@ -20,25 +20,25 @@ public class AListTest {
         assertEquals(2, L.size());
     }
 
-    
+
     @Test
     public void testAddAndGetLast() {
         AList L = new AList();
         L.addLast(99);
-        assertEquals(99, L.getLast());        
+        assertEquals(99, L.getLast());
         L.addLast(36);
-        assertEquals(36, L.getLast());        
+        assertEquals(36, L.getLast());
     }
 
-    
+
     @Test
     public void testGet() {
         AList L = new AList();
         L.addLast(99);
-        assertEquals(99, L.get(0));        
+        assertEquals(99, L.get(0));
         L.addLast(36);
-        assertEquals(99, L.get(0));        
-        assertEquals(36, L.get(1));        
+        assertEquals(99, L.get(0));
+        assertEquals(36, L.get(1));
     }
 
 
@@ -46,10 +46,10 @@ public class AListTest {
     public void testRemove() {
         AList L = new AList();
         L.addLast(99);
-        assertEquals(99, L.get(0));        
+        assertEquals(99, L.get(0));
         L.addLast(36);
         assertEquals(99, L.get(0));
-        L.removeLast(); 
+        L.removeLast();
         assertEquals(99, L.getLast());
         L.addLast(100);
         assertEquals(100, L.getLast());
@@ -71,6 +71,6 @@ public class AListTest {
     }
 
     public static void main(String[] args) {
-        com.gradescope.jh61b.junit.TestRunner.runTests("all", AListTest.class);
+        jh61b.junit.TestRunner.runTests("all", AListTest.class);
     }
 } 

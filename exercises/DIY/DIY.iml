@@ -8,6 +8,7 @@
       <sourceFolder url="file://$MODULE_DIR$/inheritance3" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/inheritance4" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/syntax1" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/addLastAndSize" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

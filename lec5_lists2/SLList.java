@@ -1,5 +1,3 @@
-package lists2;
-
 /** An SLList is a list of integers, which hides the terrible truth
    * of the nakedness within. */
 public class SLList {	

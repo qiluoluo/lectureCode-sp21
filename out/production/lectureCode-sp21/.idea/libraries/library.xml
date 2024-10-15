@@ -3,6 +3,7 @@
     <CLASSES>
       <root url="jar://$PROJECT_DIR$/library/hamcrest-core-1.3.jar!/" />
       <root url="jar://$PROJECT_DIR$/library/junit-4.12.jar!/" />
+      <root url="jar://$PROJECT_DIR$/library/jh61b-1.0.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

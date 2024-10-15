@@ -36,7 +36,6 @@ public class IntList {
 		}
 		return rest.get(i - 1);
 	}
-
 	public static void main(String[] args) {
 		IntList L = new IntList(15, null);
 		L = new IntList(10, L);
