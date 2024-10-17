@@ -166,3 +166,36 @@ Poodle largerPoodle = (Poodle) maxDog(frank, frankJr);
 
 告诉编译器给定的静态类型，但在运行时也可能出现问题。
 
+### 拼接字符
+
+```java
+public String toString() {
+    String returnString = "{";
+    for (int i = 0; i < size; i += 1) {
+        returnString += keys[i];
+        returnString += ", ";
+    }
+    returnString += "}";
+    return returnString;
+}
+```
+
+按照上面的例子使用`+`来拼接字符，其实不是在拼接字符，而是重新创建了一个新的`String`对象，赋值给`returnString`，导致效率为$O(n^2)$。
+
+要进行字符串拼接，应该使用JAVA内置的`StringBuilder`，一下是修改的代码。
+
+```javascript
+public String toString() {
+        StringBuilder returnSB = new StringBuilder("{");
+        for (int i = 0; i < size - 1; i += 1) {
+            returnSB.append(items[i].toString());
+            returnSB.append(", ");
+        }
+        returnSB.append(items[size - 1]);
+        returnSB.append("}");
+        return returnSB.toString();
+    }
+```
+
+
+
