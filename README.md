@@ -2,8 +2,6 @@
 ## 简介
 讲座中的代码以及一些练习和笔记
 
-## Lists
-
 ### 嵌套类
 
 如果嵌套类不需要访问外部类的实例方法或实例变量（例如，SLList类的`first`、`addFirst`、`getFirst`等实例成员），可以将嵌套类声明为静态。声明为静态后，这个嵌套类就和普通的类类似，它**不能访问外部类的任何实例成员**，只能访问外部类的静态成员。
@@ -134,3 +132,37 @@ peek(LP);
 ```
 
 `peek`函数依然是按照静态类型选择重载的函数。
+
+### Extends
+
+##### Constructor
+
+若我们不显式调用`super()`，Java会隐式调用父类的无参构造方法。
+
+若父类没有无参构造方法且我们没有显式调用`super(...args)` ，则编译会报错。
+
+### Type Checking and Casting
+
+一个很容易出错的地方。
+
+```java
+VengefulSLList<Integer> vsl = new VengefulSLList<Integer>(9);
+SLList<Integer> sl = vsl;
+sl.addLast(50);
+sl.removeLast();
+sl.printLostItems();   // 编译时这里会报错
+VengefulSLList<Integer> vsl2 = sl; // 编译时这里也会报错
+```
+
+之所以会报错因为编译时，只会看静态类型，若静态类型不匹配则会报错。
+
+### Casting
+
+例如
+
+```java
+Poodle largerPoodle = (Poodle) maxDog(frank, frankJr);
+```
+
+告诉编译器给定的静态类型，但在运行时也可能出现问题。
+

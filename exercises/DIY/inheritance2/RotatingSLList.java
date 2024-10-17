@@ -14,4 +14,10 @@ public class RotatingSLList<Item> extends SLList<Item>{
 		rsl.rotateRight();
 		rsl.print();
 	}
+
+
+	public void rotateRight() {
+		Item frontItem = this.removeLast();
+		this.addLast(frontItem);
+	}
 } 
